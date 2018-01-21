@@ -2,10 +2,20 @@
 
 Standalone AWS Image upload example app.
 
+### NPM Dependencies
 
-### Cors Configuration
+``` 
+    "express": "^4.16.2",
+    "aws-sdk": "^2.185.0",
+    "multer": "^1.3.0",
+    "uuid": "^3.2.1"
+```
 
-```<?xml version="1.0" encoding="UTF-8"?>
+
+### Cors Configuration for S3 Bucket
+
+```
+<?xml version="1.0" encoding="UTF-8"?>
 <CORSConfiguration xmlns="http://s3.amazonaws.com/doc/2006-03-01/">
     <CORSRule>
         <AllowedOrigin>*</AllowedOrigin>
@@ -16,4 +26,5 @@ Standalone AWS Image upload example app.
         <AllowedMethod>HEAD</AllowedMethod>
         <AllowedHeader>*</AllowedHeader>
     </CORSRule>
-</CORSConfiguration>```
+</CORSConfiguration>
+```
