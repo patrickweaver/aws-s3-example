@@ -1,23 +1,66 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>AWS Image Upload</title>
+    <title>AWS S3 Uplaod Example</title>
+    <meta name="description" content="AWS S3 Upload Example">
+    <link id="favicon" rel="icon" href="https://cdn.glitch.com/0d657f37-8261-480f-aa86-81a595291639%2Fs3.png?v=1581525379070" type="image/png">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/style.css">
+    <script src="script.js"></script>
   </head>
   <body>
-    <h1>
-      AWS Image Upload
-    </h1>
+    <header>
+      <h1>
+        AWS S3 Example
+      </h1>
+    </header>
+
+    <main> 
+      
+      <!-- This form submits the image as a regular HTML form -->
+      <form id="post-form" action="/upload-image-form" method="post" enctype="multipart/form-data">
+        <h2>
+          POST Request Form
+        </h2>
+        
+        <label>Select a file:</label>
+        <input type="file" name="file" />
+        
+        <button id="submit-post" type="submit">
+          Upload
+        </button>
+      </form>
+      
+      
+      
+      <!-- This form submits the image with a JS request -->
+      <form id="async-form">
+        <h2>
+          Async JavaScript Form
+        </h2>
+        
+        <label>Select a file:</label>
+        <input type="file" name="file" id="file-async" />
+        
+        <button type="submit" id="submit-async">
+          Upload
+        </button>
+        
+        <!-- This field is hidden, but will be displayed
+              when the upload request completes -->
+        <label id="async-url-label">AWS Url:</label>
+        <input id="async-url" type="text"  />
+        <img id="async-img" src="#" />
+      </form>
     
-    <form id="upload-form" action="/upload" method="post" enctype="multipart/form-data">
-      <label>Password:</label>
-      <input type="password" name="password" id="password-upload">
-      <input type="file" name="file" id="file-upload">
-      <button type="submit" value="Submit">
-        Upload
-      </button> 
-    </form>
+    </main>
 
-    <script src="/client.js"></script>
-
+    <div class="glitchButton" style="position:fixed;top:20px;right:20px;"></div>
+    <script src="https://button.glitch.me/button.js"></script>
   </body>
 </html>
+
+
+
