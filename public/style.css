@@ -1,0 +1,29 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: arial, sans-serif;
+  margin: 25px;
+}
+
+form {
+  border: 2px dashed #CCC;
+  padding: 25px;
+  margin: 25px 0;
+}
+
+form h2, form label, form input, form button {
+  display: block;
+  margin: 15px 0;
+}
+
+#async-url, #async-url-label {
+  width: 100%;
+  display: none;
+}
+
+#async-img {
+  display: none;
+  max-width: 400px;
+}
