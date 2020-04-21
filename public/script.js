@@ -43,6 +43,7 @@ async function asyncUpload(event) {
   
   const asyncImg = document.getElementById("async-img");
   asyncImg.src = responseJson.url;
+  asyncImg.style.display = "block";
   
   
   return;

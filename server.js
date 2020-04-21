@@ -7,16 +7,18 @@ app.use(express.static('public'));
 const { v4: uuidv4 } = require('uuid');
 
 // The AWS functionality is isolated for clarity:
-const aws = require('./helpers/aws.js');
+const aws = require('./aws.js');
 
 // Multer processes the file in the request body
 // This allows one file to be uploaded at a time.
 var multer = require('multer');
+
 var memoryStorage = multer.memoryStorage();
 var memoryUpload = multer({
 	storage: memoryStorage,
 	limits: {
-		filesize: 10*1024*1024, // 10 Mb filesize limit
+		fileSize: 4*1024, // 4KB filesize limit
+    //fileSize: 10*1024*1024, // 10 Mb filesize limit
 		files: 1
 	}
 }).single('file');
