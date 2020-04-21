@@ -27,3 +27,7 @@ form h2, form label, form input, form button {
   display: none;
   max-width: 400px;
 }
+
+img.pixelated {
+  image-rendering: pixelated;
+}
