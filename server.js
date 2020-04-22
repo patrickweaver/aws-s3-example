@@ -17,8 +17,8 @@ var memoryStorage = multer.memoryStorage();
 var memoryUpload = multer({
 	storage: memoryStorage,
 	limits: {
-		fileSize: 4*1024, // 4KB filesize limit
-    //fileSize: 10*1024*1024, // 10 Mb filesize limit
+		//fileSize: 4*1024, // 4KB filesize limit
+    fileSize: 10*1024*1024, // 10 Mb filesize limit
 		files: 1
 	}
 }).single('file');
